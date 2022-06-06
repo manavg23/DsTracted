@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DStracted - Data Visualization</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="visualizationPageStyle.css">
+  <!-- jqueury stuff.  Only used for the animation speed slider. -->
+
+  <link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">				
+  <script src="ThirdParty/jquery-1.5.2.min.js"></script>
+  <script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+
+  <script type = "application/javascript" src = "AnimationLibrary/CustomEvents.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/UndoFunctions.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedObject.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedLabel.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedCircle.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedRectangle.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedLinkedList.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/HighlightCircle.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/Line.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/ObjectManager.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimationMain.js"> </script>
+
+		<script type = "application/javascript" src = "AlgorithmLibrary/Algorithm.js"> </script>
+		<script type = "application/javascript" src = "AlgorithmLibrary/StackArray.js"> </script>
+   
+
+
+</head>
+
+<body onload="init();" class="VisualizationMainPage">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span>DStracted</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Stacks</a></li>
+          <li><a class="nav-link scrollto" href="queue.html">Queues</a></li>
+          <li><a class="nav-link scrollto" href="bst-index.html">BST</a></li>
+          <li><a class="nav-link scrollto" href="sort.html">Sorting Algorithms</a></li>
+
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">DStracted - Data Structures made easier</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">We are a team of students trying to make data structures easier to understand.</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Stack </h3>
+              <h2>Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).</h2>
+              <p>
+                There are many real-life examples of a stack. Consider an example of plates stacked over one another in the canteen. The plate which is at the top is the first one to be removed, i.e. the plate which has been placed at the bottommost position remains in the stack for the longest period of time. So, it can be simply seen to follow LIFO(Last In First Out)/FILO(First In Last Out) order.
+              </p>
+              <div class="text-center text-lg-start">
+                <a href="#values" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Try experimenting!</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/stack.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Values Section ======= -->
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+        <div id="header1">  
+          <h1>Stack (Array Implementaion)</h1>
+        </div>
+        
+        <div = id = "mainContent"> 
+          
+          <div id = "algoControlSection">
+            <!-- Table for buttons to control specific animation (insert/find/etc) -->
+            <!-- (filled in by javascript code specific to the animtion) -->
+            <table id="AlgorithmSpecificControls"> </table> 
+          </div>
+          
+            <!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
+                    
+          <canvas id="canvas" width="1000" height="500"></canvas>
+          
+          <div id = "generalAnimationControlSection">
+            <!-- Table for buttons to control general animation (play/pause/undo/etc) -->
+            <!-- (filled in by javascript code, specifically AnimationMain.js)  -->
+  
+            <table id="GeneralAnimationControls">  </table>	
+          </div>
+          
+        </div>
+      </div>
+
+    </section><!-- End Values Section -->
+
+
+
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+
+          <p>Different functions of stack</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+            <div class="row align-self-center gy-4">             
+
+            </div>
+          </div>
+
+        </div> 
+
+        <!-- Feature Tabs -->
+        <div class="row feture-tabs" data-aos="fade-up">
+          <div class="col-lg-6">
+            <h3>Now lets look at the code of Stack ADT!</h3>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3">
+              <li>
+                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Push</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Pop</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab3">Peek</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab4">isFull</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab5">isEmpty</a>
+              </li>
+            </ul><!-- End Tabs -->
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+
+              <div class="tab-pane fade show active" id="tab1">
+                
+                <div class="d-flex align-items-center mb-2">
+                  <!-- <i class="bi bi-check2"></i> -->
+                  <h4>int push(int data) { <br>
+                    if(!isfull()) { <br>
+                       top = top + 1;   <br>
+                       stack[top] = data; <br>
+                    } <br>
+                     else { <br>
+                       printf("Stack is full.\n"); <br>
+                    } <br>
+                 }</h4>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <br> <br> <br>
+                  <i class="bi bi-check2"></i>
+                  <h4>push() − Pushing (storing) an element on the stack.</h4>
+                </div>
+                <p>The push function first checks whether the stack is full or empty with the help of isFull() function. If it is not full, it increments the top counter and adds the element to that</p>
+              </div><!-- End Tab 1 Content -->
+
+              <div class="tab-pane fade show" id="tab2">
+                <div class="d-flex align-items-center mb-2">
+                  <!-- <i class="bi bi-check2"></i> -->
+                  <h4>int pop() { <br>
+                    int data; <br>
+                   
+                    if(!isempty()) { <br>
+                       data = stack[top]; <br>
+                       top = top - 1;   <br>
+                       return data; <br>
+                    } <br>
+                     else { <br>
+                       printf("Stack is empty.\n"); <br>
+                    } <br>
+                 }</h4>
+                 <br>
+                </div>
+                
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4> pop() − Removing (accessing) an element from the stack.</h4>
+                </div>
+                <p>The push function checks whether the stack is empty or not with the help of isEmpty() function.If it is not empty, then it decrements the top pointer which removes (pops) the element in the previous address.</p>
+              </div><!-- End Tab 2 Content -->
+
+              <div class="tab-pane fade show" id="tab3">
+                <div class="d-flex align-items-center mb-2">
+                  <!-- <i class="bi bi-check2"></i> -->
+                  
+                  <h4> int peek() { <br>
+                    return stack[top]; <br>
+                 }</h4>
+                 <br>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>peek() − get the top data element of the stack, without removing it.</h4>
+                </div>
+                <p>The peek function checks the element in the top pointer and returns it to the user.</p>
+              </div><!-- End Tab 3 Content -->
+
+              <div class="tab-pane fade show " id="tab4">
+                
+                <div class="d-flex align-items-center mb-2">
+                  <!-- <i class="bi bi-check2"></i> -->
+                  <h4>int isfull() { <br>
+                    if(top == MAXSIZE) <br>
+                       return 1; <br>
+                    else <br>
+                       return 0; <br>
+                 }</h4> 
+                 <br>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>isFull() − check if stack is full.
+                  </h4>
+                </div>
+                <p>The isFull() function checks whether the top pointer is the same as the max size of the array. If it is same, then it means the stack is full.</p>
+              </div>
+              <div class="tab-pane fade show " id="tab5">
+                
+                <div class="d-flex align-items-center mb-2">
+                  <!-- <i class="bi bi-check2"></i> -->
+                  <h4>                  <br>
+                    int isempty() {<br>
+                    
+                       if(top == -1) 
+                       <br>
+                       return 1; <br>
+                        else <br>
+                       return 0; <br>
+                       <br></h4>
+          
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>isEmpty() − check if stack is empty.</h4>
+                </div>
+                <p>The isEmpty() function checks whether the top pointer is equal to -1 . If it is -1, then it means that the stack is empty.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <img src="assets/img/features-2.png" class="img-fluid" alt="">
+          </div>
+
+        </div><!-- End Feature Tabs -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>TSEC, Bandra West,<br>Mumbai - 400103</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+91 9920946305 <br>+91 9820222154</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>dstracted@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+
+</html>
